@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../component/Header'
-import Steps from '../component/steps'
+import Steps from '../component/Steps'
 import Descryption from '../component/Descryption'
 import Testinomial from '../component/Testinomial'
 import GenerateBtn from '../component/GenerateBtn'
