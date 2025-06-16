@@ -10,7 +10,7 @@ function Bycredit() {
   const navigate=useNavigate()
   const initpay=async(order)=>{
     const options={
-      key:import.meta.env.RAZORPAY_KEY_ID,
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount:order.amount,
       currency:order.currency,
       name:'Credits Payment',
@@ -38,7 +38,7 @@ function Bycredit() {
       if(!user){
         setShowLogin(true)
       }
-      const {data}=await axios.post(backendUrl+'api/user/pay-razor',{planId},{headers:{token}})
+      const {data}=await axios.post(backendUrl+'/api/user/pay-razor',{planId},{headers:{token}})
       if(data.success){
         initpay(data.order)
       }
